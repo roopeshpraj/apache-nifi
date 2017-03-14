@@ -73,3 +73,16 @@ Add users in authorized-users.xml
 
 Delete users.xml and authorizations.xml and then restart nifi, https://nifiurl:8443/nifi should redirect you to https://nifiurl:8443/nifi/login login prompt. Upon successful login, you land upon Nifi admin console. 
 
+<b>Snippets</b>
+users.xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tenants>
+    <groups/>
+    <users>
+        <user identifier="62cab486-0e44-328e-8c31-db0f94e17521" identity="employeenumber=USER1,ou=employees,ou=identities,ou=baplc,dc=ba,dc=com"/>
+        <user identifier="77593cc2-c2a9-34d6-a678-ff503b65b454" identity="employeenumber=USER2,ou=employees,ou=identities,ou=baplc,dc=ba,dc=com"/>
+        <user identifier="019f0fe0-38a3-33be-abab-93ff8c645ddc" identity="employeenumber=USER3,ou=employees,ou=identities,ou=baplc,dc=ba,dc=com"/>
+    </users>
+</tenants>
+
