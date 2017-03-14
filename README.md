@@ -73,8 +73,8 @@ Add users in authorized-users.xml
 
 Delete users.xml and authorizations.xml and then restart nifi, https://nifiurl:8443/nifi should redirect you to https://nifiurl:8443/nifi/login login prompt. Upon successful login, you land upon Nifi admin console. 
 
-<b>Snippets</b>
-users.xml
+<b>Snippets of conf files </b>
+users.xml (auto generated)
 
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tenants>
@@ -86,3 +86,41 @@ users.xml
     </users>
 </tenants>
 
+authorizations.xml (auto generated)
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authorizations>
+    <policies>
+        <policy identifier="d5b277bc-76cf-37e4-ac92-390de76d0237" resource="/controller" action="R">
+            <user identifier="df3bea4f-e62c-3bb1-8ed3-276b58d9bab1"/>
+            <user identifier="62cab486-0e44-328e-8c31-db0f94e17521"/>
+            <user identifier="77593cc2-c2a9-34d6-a678-ff503b65b454"/>
+            <user identifier="019f0fe0-38a3-33be-abab-93ff8c645ddc"/>
+        </policy>
+        <policy identifier="f8546dd5-449c-36e5-b812-a59d11272f41" resource="/process-groups/a7d3fe7b-d736-436b-9207-f310bffed50b" action="R">
+            <user identifier="df3bea4f-e62c-3bb1-8ed3-276b58d9bab1"/>
+            <user identifier="62cab486-0e44-328e-8c31-db0f94e17521"/>
+            <user identifier="77593cc2-c2a9-34d6-a678-ff503b65b454"/>
+            <user identifier="019f0fe0-38a3-33be-abab-93ff8c645ddc"/>
+        </policy>
+etc
+
+"authorized-users.xml" (need to fill this, but will get auto generated as this is a legacy file - check authorizers.xml)
+<users>
+    <user dn="employeenumber=USER1,ou=employees,ou=identities,ou=baplc,dc=ba,dc=com">
+        <role name="ROLE_ADMIN"/>
+        <role name="ROLE_DFM"/>
+    </user>
+    <user dn="employeenumber=USER2,ou=employees,ou=identities,ou=baplc,dc=ba,dc=com">
+        <role name="ROLE_ADMIN"/>
+        <role name="ROLE_DFM"/>
+    </user>
+    <user dn="employeenumber=USER3,ou=employees,ou=identities,ou=baplc,dc=ba,dc=com">
+        <role name="ROLE_ADMIN"/>
+        <role name="ROLE_DFM"/>
+    </user>
+    <user dn="employeenumber=USER4,ou=employees,ou=identities,ou=baplc,dc=ba,dc=com">
+        <role name="ROLE_ADMIN"/>
+        <role name="ROLE_DFM"/>
+    </user>
+</users>
