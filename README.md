@@ -36,7 +36,7 @@ nifi.security.identity.mapping.pattern.dn=^ou=(.*?),ou=(.*?),ou=(.*?),dc=(.*?),d
 nifi.security.identity.mapping.value.dn=$1@$2
 
 Set the following in login-identity-providers.xml
-<pre>
+<code>
 <provider>
         <identifier>ldap-provider</identifier>
         <class>org.apache.nifi.ldap.LdapProvider</class>
@@ -55,7 +55,7 @@ Set the following in login-identity-providers.xml
         <property name="Identity Strategy">USE_DN</property>
         <property name="Authentication Expiration">12 hours</property>
     </provider>
-</pre>
+</code>
 Set the following in authorizers.xml
 
         <identifier>file-provider</identifier>
